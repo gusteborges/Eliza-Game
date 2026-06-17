@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cih62lbsygv4k"]
+
+[ext_resource type="VideoStream" uid="uid://d32laak1a51ow" path="res://assets/third_person_controller_assets/escadaSubindo.ogv" id="1_7feia"]
+[ext_resource type="Shader" uid="uid://c4mif2rbv4kn5" path="res://scenes/transicao.gdshader" id="1_ia6qf"]
+[ext_resource type="Script" uid="uid://c11uom3fxjss1" path="res://scripts/Transicao_escada.gd" id="2_7feia"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cr15k"]
+shader = ExtResource("1_ia6qf")
+shader_parameter/posicao_logo = Vector2(0.9, 0.85)
+shader_parameter/tamanho_mancha = 0.05
+shader_parameter/suavidade = 0.5
+shader_parameter/cor_mancha = Color(0, 0, 0, 1)
+
+[node name="Transicao_Scada" type="Control" unique_id=44646053]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=2105091610]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_7feia")
+autoplay = true
+expand = true
+script = ExtResource("2_7feia")
+caminho_proxima_cena = "uid://c6qouh4a367o7"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1903535974]
+material = SubResource("ShaderMaterial_cr15k")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.9372549)
+
+[connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]

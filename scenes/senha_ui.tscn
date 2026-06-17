@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://b1sdmi2bl0hjt"]
+
+[ext_resource type="Script" uid="uid://dsa1s2xovlr0y" path="res://scripts/senha_ui.gd" id="1_fgopn"]
+
+[node name="SenhaUI" type="CanvasLayer" unique_id=44767273]
+process_mode = 2
+script = ExtResource("1_fgopn")
+metadata/_edit_vertical_guides_ = [950.0]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1062421046]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.41568628)
+
+[node name="Panel" type="Panel" parent="." unique_id=2090668158]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel" unique_id=1188762653]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -73.0
+offset_top = 208.0
+offset_right = 54.0
+offset_bottom = 231.0
+grow_horizontal = 2
+text = "Senha de acesso"
+
+[node name="LineEdit" type="LineEdit" parent="Panel" unique_id=1434454950]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -236.0
+offset_top = -33.0
+offset_right = 217.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Panel" unique_id=1744952725]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -232.0
+offset_top = -302.0
+offset_right = 214.0
+offset_bottom = -216.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Confirmar"
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

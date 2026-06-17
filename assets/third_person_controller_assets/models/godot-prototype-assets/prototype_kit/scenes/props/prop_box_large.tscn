@@ -1,0 +1,35 @@
+[gd_scene format=4 uid="uid://kaumdwkdn5aj"]
+
+[ext_resource type="Texture2D" uid="uid://djuqgjt3xg4jt" path="res://prototype_kit/textures/PrototypeTextures/PNG/Light/texture_12.png" id="1_wcrlt"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ow3x0"]
+data = PackedVector3Array(-1, -0.5, 1, -1, -0.5, -1, -1, 0.5, -1, 1, -0.5, -1, -1, -0.5, -1, -1, -0.5, 1, -1, 0.5, -1, -1, -0.5, -1, 1, -0.5, -1, -1, 0.5, -1, -1, 0.5, 1, -1, -0.5, 1, -1, -0.5, 1, -1, 0.5, 1, 1, 0.5, 1, 1, 0.5, 1, -1, 0.5, 1, -1, 0.5, -1, -1, -0.5, 1, 1, -0.5, 1, 1, -0.5, -1, 1, 0.5, 1, 1, -0.5, 1, -1, -0.5, 1, 1, -0.5, -1, 1, -0.5, 1, 1, 0.5, 1, 1, -0.5, -1, 1, 0.5, -1, -1, 0.5, -1, -1, 0.5, -1, 1, 0.5, -1, 1, 0.5, 1, 1, 0.5, 1, 1, 0.5, -1, 1, -0.5, -1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4to2k"]
+albedo_texture = ExtResource("1_wcrlt")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_n4pss"]
+_surfaces = [{
+"aabb": AABB(-1, -0.5, -1, 2, 1, 2),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"material": SubResource("StandardMaterial3D_4to2k"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("AACAvwAAAL8AAIA/AACAvwAAAL8AAIC/AACAvwAAAD8AAIC/AACAPwAAAL8AAIC/AACAvwAAAL8AAIC/AACAvwAAAL8AAIA/AACAvwAAAD8AAIC/AACAvwAAAL8AAIC/AACAPwAAAL8AAIC/AACAvwAAAD8AAIC/AACAvwAAAD8AAIA/AACAvwAAAL8AAIA/AACAvwAAAL8AAIA/AACAvwAAAD8AAIA/AACAPwAAAD8AAIA/AACAPwAAAD8AAIA/AACAvwAAAD8AAIA/AACAvwAAAD8AAIC/AACAvwAAAL8AAIA/AACAPwAAAL8AAIA/AACAPwAAAL8AAIC/AACAPwAAAD8AAIA/AACAPwAAAL8AAIA/AACAvwAAAL8AAIA/AACAPwAAAL8AAIC/AACAPwAAAL8AAIA/AACAPwAAAD8AAIA/AACAPwAAAL8AAIC/AACAPwAAAD8AAIC/AACAvwAAAD8AAIC/AACAvwAAAD8AAIC/AACAPwAAAD8AAIC/AACAPwAAAD8AAIA/AACAPwAAAD8AAIA/AACAPwAAAD8AAIC/AACAPwAAAL8AAIC/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[node name="prop_box_large" type="Node3D" unique_id=1985685246]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1212320357]
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1928033590]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("ConcavePolygonShape3D_ow3x0")
+
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=251827484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("ArrayMesh_n4pss")

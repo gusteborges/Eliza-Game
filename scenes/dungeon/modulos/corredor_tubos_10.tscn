@@ -1,0 +1,86 @@
+[gd_scene format=4 uid="uid://t0vtaihjf43q"]
+
+[ext_resource type="Script" uid="uid://c12r1nc6qk068" path="res://scenes/dungeon/sala_base.gd" id="1_mgxdy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qvias"]
+resource_name = "brick_modern"
+cull_mode = 2
+roughness = 0.07647059
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p0qe2"]
+resource_name = "concrete_bare_01"
+cull_mode = 2
+roughness = 0.07647059
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xoyc3"]
+_surfaces = [{
+"aabb": AABB(-0.1480343, -1.240659, -1.755219, 0.2960686, 2.481318, 1.876408),
+"format": 34896613377,
+"index_count": 102,
+"index_data": PackedByteArray("AAANAAIAAgANAA4AAgAOAAMABQADAA4ADQAEAA4ABQAOAAQADQABAAQAAAABAA0AAQAPAAQABQAEAA8AAQAQAA8AAAAQAAEAEAAKAA8ABQAPAAoAEAARAAoAAAARABAABQAKABIAEQASAAoAAAATABEAEQATABIAEwALABIABQASAAsAAAAGABMAEwAGAAsABQALABQABgAUAAsABQAUAAwADAAUAAkABgAVABQAAAAVAAYAFQAJABQAAAAHABUAFQAIAAkABwAIABUA"),
+"lods": [0.3131957, PackedByteArray("AAABAAIAAgABAAMAAQAEAAMABQADAAQAAAAGAAEAAAAHAAYABwAIAAYABgAIAAkAAQAKAAQAAQAGAAoABQAEAAoABgAJAAsABgALAAoABQAKAAsADAALAAkABQALAAwA")],
+"name": "brick_modern",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 22,
+"vertex_data": PackedByteArray("AAAat///AAAAAKjmpT4AAAAA/////wAA////////AAD//6jmpT4AAP//Grf//wAAAABWGaU+AAAAAORI//8AAAAAAAD//wAA//8AAP//AAD///9/AAAAAP//VhmlPgAA///kSP//AAAAAP//jJAAAP////+MkAAA//94uk4RAAAAAHi6ThEAAAAA/38AAAAA//+GRU4RAAAAAIZFThEAAP//AACMkAAAAAAAAIyQAAA=")
+}, {
+"aabb": AABB(-0.1480343, -1.240659, 0.121189, 0.2960686, 2.481318, 1.358054),
+"format": 34359742465,
+"index_count": 42,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAAAEAAEAAAAFAAQAAAAGAAUAAAACAAcAAgADAAcABgAAAAgAAAAHAAgABgAIAAkACgAJAAgACgAIAAcACgAHAAMACgADAAsA"),
+"name": "concrete_bare_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("TpYXvurNnr/WV70/TpYXvurNnj/wMfg9TpYXvuLNnj/WV70/TpYXPurNnj/wMfg9TpYXvve7CD/wMfg9TpYXvrS7CL/wMfg9TpYXvurNnr/wMfg9TpYXPuLNnj/WV70/TpYXPurNnr/WV70/TpYXPurNnr/wMfg9TpYXPrS7CL/wMfg9TpYXPve7CD/wMfg9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hd80d"]
+resource_name = "SerwersP.010"
+_surfaces = [{
+"aabb": AABB(-0.1480343, -1.240659, -1.755219, 0.2960686, 2.481318, 1.876408),
+"attribute_data": PackedByteArray("Ebuv/yupPrqhn6//dfY+uo7kr////6//Ebuv/3X2PrqO5K////+v/9DPvqMrqT66oZ+v/w65W6GOxFuhjsTM5g65zOYOuXuejsQ9z47Ee54Ouf//jsT//w65W6GOxMzmjsRboQ65zOahn6jXzbn1qdDPvqPT5fWp//+o1///qNfT5fWpzbn1qaGfqNcOucW+jsTFvg65Pc+OxALrDrkC6w65d7OOxHezjsTFvg65xb4="),
+"format": 34896613399,
+"index_count": 102,
+"index_data": PackedByteArray("AAAaAAIAAAABABoAAAAbAAEAAAAcABsAAAAdABwAAAADAB0AAAAeAAMAAAAEAB4ABAAFAB4ABgAfAAgACAAfAAkABgAHAB8ABgAgAAcABgAKACAABgAhAAoABgALACEABgAiAAsABgAMACIAIwAOACQAIwANAA4AEAAjACQAEAAkAA8AJQAmABIAJQAnACYAJwAVACYAJwAUABUAKAAlABIAKAASACkAEQAoACkAEQApABMAFgAqABgAFgArACoAKwAXACoAKwAZABcA"),
+"lods": [0.3131957, PackedByteArray("AAABAAIAAAADAAEAAAAEAAMABAAFAAMABgAHAAgACAAHAAkABgAKAAcABgALAAoABgAMAAsADQAOAA8AEAANAA8AEQASABMAEQAUABIAFAAVABIAFgAXABgAFgAZABcA")],
+"material": SubResource("StandardMaterial3D_qvias"),
+"name": "brick_modern",
+"primitive": 3,
+"uv_scale": Vector4(2.03794, 1.6152945, 0, 0),
+"vertex_count": 44,
+"vertex_data": PackedByteArray("AAAat///qioAAKjmpT6qKgAA/////6oqAABWGaU+qioAAORI//+qKgAAAAD//6oq//8at///VNX//1YZpT5U1f//5Ej//1TV//8AAP//VNX///9/AABU1f//qOalPlTV////////VNUAAKjmpT522v//qOalPnba/////////78AAP//////vwAAqOalPogl////fwAAAAD//6jmpT6IJQAAVhmlPogl//9WGaU+iCUAAFYZpT6IJf//AAD///8///9WGaU+iCUAAAAA////PwAA//+MkKoqAAB4uk4RqioAAP9/AACqKgAAhkVOEaoqAAAAAIyQqir//wAAjJBU1f//hkVOEVTV//94uk4RVNX/////jJBU1QAA//+MkOjH/////4yQ6McAAP9/AAAAAP//hkVOEe0RAACGRU4R7REAAHi6ThHtEf//eLpOEe0R//8AAIyQFjgAAAAAjJAWOFRVqqpUVamqVFWqqlVVqqpUVaqqVFWqqqqqVVWqqlVVqqpUVaqqVFWqqlRVqapUVaqqVFX///9/////f////3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/VVWqqlVVqqpUVamqVFWpqlRVqqqqqlRVqapUVaqqVVWqqlVV////f////3////9/AAD/fwAA/3////9/////fwAA/38AAP9/")
+}, {
+"aabb": AABB(-0.1480343, -1.240659, 0.121189, 0.2960686, 2.481318, 1.358054),
+"attribute_data": PackedByteArray("Cg3Zvl6ffT997LA/AHUPO33ssD9en30/hjBePwB1Dzv/ELk9AHUPOwMN2b4Adw87/xC5PQB1Dzt97LA/AHUPO4YwXj8AdQ87feywP16ffT8KDdm+Xp99PwMN2b4Adw87UfTIPvU+fj/WhRs/AIbgO9aFGz/1Pn4/UfTIPgCG4DtR9Mg+AIbgO9aFGz/1Pn4/1oUbPwCG4DtR9Mg+9T5+Px+R6D76MWI/crcLP0hw7j1ytws/+jFiPx+R6D5IcO49"),
+"format": 34359742487,
+"index_count": 42,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAAAEAAMAAAAFAAQABgAHAAgABgAJAAcABgAKAAkABgALAAoADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_p0qe2"),
+"name": "concrete_bare_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("TpYXvurNnr/WV70/TpYXvurNnj/wMfg9TpYXvuLNnj/WV70/TpYXvve7CD/wMfg9TpYXvrS7CL/wMfg9TpYXvurNnr/wMfg9TpYXPrS7CL/wMfg9TpYXPurNnj/wMfg9TpYXPve7CD/wMfg9TpYXPuLNnj/WV70/TpYXPurNnr/WV70/TpYXPurNnr/wMfg9TpYXvuLNnj/WV70/TpYXPurNnj/wMfg9TpYXPuLNnj/WV70/TpYXvurNnj/wMfg9TpYXvurNnr/wMfg9TpYXPurNnr/WV70/TpYXPurNnr/wMfg9TpYXvurNnr/WV70/TpYXvurNnr/WV70/TpYXPuLNnj/WV70/TpYXPurNnr/WV70/TpYXvuLNnj/WV70/AAD/f/9///8AAP9//3///wAA/3//f///AAD/f/9///8AAP9//3///wAA/3//f/7/////f/9/AAD///9//38AAP///3////+/////f/9/AAD///9//38AAP///3//fwAA/3/+/////7//f/7/////v/9//v////+//3/+/////7//fwAA////P/9/AAD///8//38AAP///z//fwAA////P/9//3////+//3//f////7//f/9/////v/9//3////+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_xoyc3")
+
+[node name="corredor_tubos_10" type="StaticBody3D" unique_id=1268501913]
+script = ExtResource("1_mgxdy")
+
+[node name="Malha" type="MeshInstance3D" parent="." unique_id=849649486]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("ArrayMesh_hd80d")
+
+[node name="Colisao" type="CollisionShape3D" parent="." unique_id=126996531]
+
+[node name="Saidas" type="Node3D" parent="." unique_id=679355465]
+
+[node name="NorthExit" type="Marker3D" parent="Saidas" unique_id=1515752307]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="SouthExit" type="Marker3D" parent="Saidas" unique_id=699388144]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 4)

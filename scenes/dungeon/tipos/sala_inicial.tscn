@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://cwaq3r7ebvr0r"]
+
+; ============================================================
+;  SALA INICIAL — Sala onde o player começa a dungeon.
+;
+;  Dimensões:
+;    Piso  : 8 × 8 unidades
+;    Paredes: 3 paredes fechadas + 1 abertura ao norte
+;
+;  Conectores:
+;    NorthExit (0, 0, -4) → única saída, liga ao primeiro corredor
+;
+;  Spawn:
+;    PontoSpawnJogador em (0, 1, 0) → centro da sala, acima do chão
+; ============================================================
+
+[ext_resource type="Script" uid="uid://c12r1nc6qk068" path="res://scenes/dungeon/sala_base.gd" id="1_base"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_piso"]
+size = Vector3(8.0, 0.1, 8.0)
+
+[sub_resource type="BoxShape3D" id="BoxShape_piso"]
+size = Vector3(8.0, 0.1, 8.0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_parede_sul"]
+size = Vector3(8.2, 3.0, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape_parede_sul"]
+size = Vector3(8.2, 3.0, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_parede_esq"]
+size = Vector3(0.2, 3.0, 8.0)
+
+[sub_resource type="BoxShape3D" id="BoxShape_parede_esq"]
+size = Vector3(0.2, 3.0, 8.0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_parede_dir"]
+size = Vector3(0.2, 3.0, 8.0)
+
+[sub_resource type="BoxShape3D" id="BoxShape_parede_dir"]
+size = Vector3(0.2, 3.0, 8.0)
+
+[node name="SalaInicial" type="StaticBody3D"]
+script = ExtResource("1_base")
+
+; ── PISO ─────────────────────────────────────────────────────
+[node name="Piso" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+mesh = SubResource("BoxMesh_piso")
+
+[node name="ColisaoPiso" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+shape = SubResource("BoxShape_piso")
+
+; ── PAREDES (sem parede ao norte = abertura de saída) ────────
+[node name="ParedeSul" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 4.1)
+mesh = SubResource("BoxMesh_parede_sul")
+
+[node name="ColisaoParedeSul" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 4.1)
+shape = SubResource("BoxShape_parede_sul")
+
+[node name="ParedeEsquerda" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1, 1.5, 0)
+mesh = SubResource("BoxMesh_parede_esq")
+
+[node name="ColisaoParedeEsq" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1, 1.5, 0)
+shape = SubResource("BoxShape_parede_esq")
+
+[node name="ParedeDireita" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1, 1.5, 0)
+mesh = SubResource("BoxMesh_parede_dir")
+
+[node name="ColisaoParedeDir" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1, 1.5, 0)
+shape = SubResource("BoxShape_parede_dir")
+
+; ── CONECTORES ───────────────────────────────────────────────
+[node name="Saidas" type="Node3D" parent="."]
+
+[node name="NorthExit" type="Marker3D" parent="Saidas"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+; ── SPAWN DO PLAYER ──────────────────────────────────────────
+[node name="PontoSpawnJogador" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

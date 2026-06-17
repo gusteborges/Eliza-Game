@@ -1,0 +1,70 @@
+[gd_scene format=3]
+
+; ============================================================
+;  CORREDOR TESTE — Geometria simples para validar o sistema.
+;  Use este como modelo para criar os corredores reais.
+;
+;  Dimensões:
+;    Piso   : 4 unidades de largura × 8 unidades de comprimento
+;    Altura  : sem teto (ambiente aberto para facilitar debug)
+;    Chão    : Y = 0 (superfície superior do BoxMesh)
+;
+;  Conectores:
+;    NorthExit (0, 0, -4) → abertura norte
+;    SouthExit (0, 0,  4) → abertura sul
+; ============================================================
+
+[ext_resource type="Script" uid="uid://c12r1nc6qk068" path="res://scenes/dungeon/sala_base.gd" id="1_base"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_piso"]
+size = Vector3(4.0, 0.1, 8.0)
+
+[sub_resource type="BoxShape3D" id="BoxShape_piso"]
+size = Vector3(4.0, 0.1, 8.0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_parede_esq"]
+size = Vector3(0.2, 2.0, 8.0)
+
+[sub_resource type="BoxShape3D" id="BoxShape_parede_esq"]
+size = Vector3(0.2, 2.0, 8.0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_parede_dir"]
+size = Vector3(0.2, 2.0, 8.0)
+
+[sub_resource type="BoxShape3D" id="BoxShape_parede_dir"]
+size = Vector3(0.2, 2.0, 8.0)
+
+[node name="CorredorTeste" type="StaticBody3D"]
+script = ExtResource("1_base")
+
+[node name="Piso" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+mesh = SubResource("BoxMesh_piso")
+
+[node name="ColisaoPiso" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+shape = SubResource("BoxShape_piso")
+
+[node name="ParedeEsquerda" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 1.0, 0)
+mesh = SubResource("BoxMesh_parede_esq")
+
+[node name="ColisaoParedeEsq" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 1.0, 0)
+shape = SubResource("BoxShape_parede_esq")
+
+[node name="ParedeDireita" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1, 1.0, 0)
+mesh = SubResource("BoxMesh_parede_dir")
+
+[node name="ColisaoParedeDir" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1, 1.0, 0)
+shape = SubResource("BoxShape_parede_dir")
+
+[node name="Saidas" type="Node3D" parent="."]
+
+[node name="NorthExit" type="Marker3D" parent="Saidas"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="SouthExit" type="Marker3D" parent="Saidas"]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 4)

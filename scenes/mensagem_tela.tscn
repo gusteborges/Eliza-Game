@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://crw7sxqth46i3"]
+
+[ext_resource type="Script" uid="uid://f3olxv5qu0tq" path="res://scripts/mensagem_tela.gd" id="1_67bl3"]
+
+[node name="MensagemTela" type="CanvasLayer" unique_id=429272346]
+script = ExtResource("1_67bl3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1608427866]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8980392)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=929934820]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -23.0
+offset_right = 84.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.15134355, 0.10833212, 0.8117647)
+theme_override_font_sizes/font_size = 36
+text = "A porta esta trancada"
+
+[node name="Timer" type="Timer" parent="." unique_id=426756513]
+wait_time = 1.7999999999999998
+one_shot = true

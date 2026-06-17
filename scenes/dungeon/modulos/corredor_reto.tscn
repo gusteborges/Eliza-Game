@@ -1,0 +1,43 @@
+[gd_scene format=4]
+
+; ============================================================
+;  TEMPLATE: Corredor Reto (2 saídas: North + South)
+;
+;  PASSOS OBRIGATÓRIOS NO EDITOR:
+;  1. Selecione o nó "Malha" → arraste o mesh correto do
+;     Sewers.dae importado (SerwersP1 ou o corredor reto)
+;  2. Adicione um CollisionShape3D no nó "Colisao" compatível
+;     com o mesh acima (Menu Superior → Malha → Criar Colisão)
+;  3. Mova o Marker3D "NorthExit":
+;        Posição: borda norte da abertura (ponto onde a próxima peça encostará)
+;        Rotação Y: 0° (aponta para fora, para o norte)
+;  4. Mova o Marker3D "SouthExit":
+;        Posição: borda sul da abertura
+;        Rotação Y: 180° (aponta para fora, para o sul)
+;  5. Salve a cena.
+; ============================================================
+
+[ext_resource type="Script" path="res://scenes/dungeon/sala_base.gd" id="1_base"]
+
+[node name="CorredorReto" type="StaticBody3D"]
+script = ExtResource("1_base")
+
+[node name="Malha" type="MeshInstance3D" parent="."]
+; ← SUBSTITUA: arraste o MeshInstance3D do Sewers.dae aqui
+
+[node name="Colisao" type="CollisionShape3D" parent="."]
+; ← SUBSTITUA: adicione o shape correspondente ao mesh
+
+[node name="Saidas" type="Node3D" parent="."]
+
+[node name="NorthExit" type="Marker3D" parent="Saidas"]
+; Ajuste position para a borda norte do corredor
+; rotation_degrees.y = 0.0  (aponta para norte, para fora)
+position = Vector3(0, 0, -4)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="SouthExit" type="Marker3D" parent="Saidas"]
+; Ajuste position para a borda sul do corredor
+; rotation_degrees.y = 180.0  (aponta para sul, para fora)
+position = Vector3(0, 0, 4)
+rotation_degrees = Vector3(0, 180, 0)

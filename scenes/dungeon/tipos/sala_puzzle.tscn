@@ -1,0 +1,26 @@
+[gd_scene format=4]
+
+; Sala de puzzle/desafio.
+
+[ext_resource type="Script" path="res://scenes/dungeon/sala_base.gd" id="1_base"]
+
+[node name="SalaPuzzle" type="StaticBody3D"]
+script = ExtResource("1_base")
+
+[node name="Malha" type="MeshInstance3D" parent="."]
+
+[node name="Colisao" type="CollisionShape3D" parent="."]
+
+[node name="Saidas" type="Node3D" parent="."]
+
+[node name="NorthExit" type="Marker3D" parent="Saidas"]
+position = Vector3(0, 0, -4)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="SouthExit" type="Marker3D" parent="Saidas"]
+position = Vector3(0, 0, 4)
+rotation_degrees = Vector3(0, 180, 0)
+
+[node name="GatilhoPuzzle" type="Marker3D" parent="."]
+; Posição central do puzzle
+position = Vector3(0, 0, 0)

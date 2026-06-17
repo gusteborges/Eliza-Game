@@ -1,0 +1,27 @@
+[gd_scene format=4]
+
+; TEMPLATE: T-Junction Invertida / Bottom (South + East + West)
+; Corresponde ao nó 'TB' do Sewers.dae
+
+[ext_resource type="Script" path="res://scenes/dungeon/sala_base.gd" id="1_base"]
+
+[node name="SalaTInvertida" type="StaticBody3D"]
+script = ExtResource("1_base")
+
+[node name="Malha" type="MeshInstance3D" parent="."]
+
+[node name="Colisao" type="CollisionShape3D" parent="."]
+
+[node name="Saidas" type="Node3D" parent="."]
+
+[node name="SouthExit" type="Marker3D" parent="Saidas"]
+position = Vector3(0, 0, 4)
+rotation_degrees = Vector3(0, 180, 0)
+
+[node name="EastExit" type="Marker3D" parent="Saidas"]
+position = Vector3(4, 0, 0)
+rotation_degrees = Vector3(0, -90, 0)
+
+[node name="WestExit" type="Marker3D" parent="Saidas"]
+position = Vector3(-4, 0, 0)
+rotation_degrees = Vector3(0, 90, 0)

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://csuk5hsx4c1gy"]
+
+[ext_resource type="Script" uid="uid://yh8bapiq65ex" path="res://scenes/dungeon/gerador_dungeon.gd" id="1_gerador"]
+[ext_resource type="PackedScene" path="res://scenes/dungeon/modulos/corredor_teste.tscn" id="2_teste"]
+[ext_resource type="PackedScene" uid="uid://b8lg0ulsflcp5" path="res://scenes/dungeon/modulos/corredor_var1_10.tscn" id="3_frwky"]
+[ext_resource type="PackedScene" uid="uid://b0y2njian5hh1" path="res://scenes/player.tscn" id="3_player"]
+
+[sub_resource type="Environment" id="Env_dungeon"]
+background_mode = 1
+background_color = Color(0.05, 0.05, 0.07, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.4, 0.38, 0.45, 1)
+ambient_light_energy = 0.6
+fog_enabled = true
+fog_light_color = Color(0.05, 0.05, 0.07, 1)
+fog_density = 0.015
+
+[node name="Dungeon" type="Node3D" unique_id=873898429]
+script = ExtResource("1_gerador")
+max_salas = 16
+modulos_manuais = Array[PackedScene]([ExtResource("2_teste"), ExtResource("3_frwky")])
+chance_desvio = 0.0
+chance_familia_aleatoria = 0.0
+
+[node name="Player" parent="." unique_id=2013465480 instance=ExtResource("3_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="LuzPrincipal" type="DirectionalLight3D" parent="." unique_id=140508207]
+transform = Transform3D(1, 0, 0, 0, 0.7071068, -0.7071068, 0, 0.7071068, 0.7071068, 0, 10, 5)
+light_energy = 1.2
+shadow_enabled = true
+
+[node name="Ambiente" type="WorldEnvironment" parent="." unique_id=1599018689]
+environment = SubResource("Env_dungeon")
+
+[node name="LuzAmbienteExtra" type="OmniLight3D" parent="." unique_id=1502299832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+light_energy = 0.8
+omni_range = 20.0

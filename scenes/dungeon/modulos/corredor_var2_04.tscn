@@ -1,0 +1,111 @@
+[gd_scene format=4 uid="uid://iq80var6gpl1"]
+
+[ext_resource type="Script" uid="uid://c12r1nc6qk068" path="res://scenes/dungeon/sala_base.gd" id="1_yn06y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dxp7n"]
+resource_name = "concrete_base_03"
+cull_mode = 2
+roughness = 0.07647059
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ktnc"]
+resource_name = "soil_mud"
+cull_mode = 2
+roughness = 0.07647059
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s7w2j"]
+resource_name = "concrete_base_02"
+cull_mode = 2
+roughness = 0.07647059
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4n772"]
+_surfaces = [{
+"aabb": AABB(-0.9898215, -1.307794, -1.001683, 1.9796429, 2.615588, 1.8132336),
+"format": 34896613377,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAgABAAQAAgAEAAUABQAEAAYABQAGAAcABwAGAAgABwAIAAkACQAIAAoACQAKAAsADAALAAoADAAKAA0ADgAMAA0ADgANAA8AEAAOAA8AEAAPABEAEgAQABEAEgARABMAFAASABMAFAATABUA"),
+"name": "concrete_base_03",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 22,
+"vertex_data": PackedByteArray("2zUAAP//AABEHv//oukAAEQeAACi6QAA2zX/////AAAAAP//RqEAAAAAAABGoQAAXgr//4hSAABeCgAAiFIAABU6//9pFgAAFToAAGkWAAD/f///AAAAAP9/AAAAAAAA6cUAAGkWAADpxf//aRYAAKD1AACIUgAAoPX//4hSAAD//wAARqEAAP////9GoQAAuuEAAKLpAAC64f//oukAACPKAAD//wAAI8r/////AAA=")
+}, {
+"aabb": AABB(-0.3077077, -1.307794, 0.8865211, 0.6154154, 2.615588, 1e-05),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAAAEAAMAAAAFAAQA"),
+"name": "soil_mud",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("/38AAAAAAAAAAP//AAAAAAAAAAAAAAAA/3///wAAAAD+////AAAAAP//AAAAAAAA")
+}, {
+"aabb": AABB(-0.5733325, -1.307794, 0.8115507, 1.1466649, 2.615588, 0.074970424),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAAAEAAMAAAAFAAQABgAHAAgABgAJAAcABgAIAAoABgAKAAsA"),
+"name": "concrete_base_02",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("TTsAAAAAAAAAAP//AAAAAAAAAAAAAAAATTv//wAAAABNO/////8AAE07AAD//wAAscQAAAAAAAD/////AAAAALHE//8AAAAA//8AAAAAAACxxP////8AALHEAAD//wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_q03fd"]
+resource_name = "Serwers02.004"
+_surfaces = [{
+"aabb": AABB(-0.9898215, -1.307794, -1.001683, 1.9796429, 2.615588, 1.8132336),
+"attribute_data": PackedByteArray("kWJFov//lI2RYpSN//9FopFiSlb//26QkWJukP//Slb//26Q//+xz5Fisc//////kWL//5Fi+qX//03jkWJN4///+qWRYvql///6pZFiRaL//5SN//9FopFilI2RYkpW//9ukP//SlaRYm6Q//+xz///bpCRYrHP/////5Fi//8="),
+"format": 34896613399,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUABgAIAAkABgAJAAoACgAJAAsACgALAAwADQAOAA8ADQAQAA4AEQAPAA4AEQAOABIAEwAUABUAEwAWABQAFwAYABkAFwAaABgAGgAbABwAGgAdABsAHQAeABsAHQAfAB4A"),
+"material": SubResource("StandardMaterial3D_dxp7n"),
+"name": "concrete_base_03",
+"primitive": 3,
+"uv_scale": Vector4(4.160668, 2.9666212, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("2zUAAP//XxREHv//oulBGkQeAACi6UEa2zX/////XxREHgAAoum95QAA//9GocPYAAAAAEahw9hEHv//oum95QAA//9GocPYXgr//4hSFcxeCgAAiFIVzBU6//9pFjzDFToAAGkWPMMVOgAAaRY8w/9///8AAP8//38AAAAA/z8VOv//aRY8w+nFAABpFsI86cX//2kWwjwjygAA//+f67rh//+i6b3lI8r/////n+u64QAAoum95brhAACi6UEa/////0ahOye64f//oulBGv//AABGoTsnoPX//4hS6TP/////RqE7J6D1AACIUukz6cX//2kWwjzpxQAAaRbCPO017TUuMy4zLjMuM+017TUuMy4zpyynLKcspywuMy4zpyynLP4j/iP+I/4jrRetF60XrRetF60X//////////+tF60XUehR6FHoUegRyhHK0MzQzBHKEcrQzNDM0MzQzFfTV9PQzNDMV9NX0wDcANxX01fTANwA3FHoUehR6FHo")
+}, {
+"aabb": AABB(-0.3077077, -1.307794, 0.8865211, 0.6154154, 2.615588, 1e-05),
+"attribute_data": PackedByteArray("R1uLwP//F4FHWxeB//+LwP////9HW///"),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAAAEAAMAAAAFAAQA"),
+"material": SubResource("StandardMaterial3D_4ktnc"),
+"name": "soil_mud",
+"primitive": 3,
+"uv_scale": Vector4(4.874938, 1.9830756, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("/38AAAAAAAAAAP//AAAAAAAAAAAAAAAA/3///wAAAAD+////AAAAAP//AAAAAAAA/7//v/+//7//v/+//7//v/+//7//v/+/")
+}, {
+"aabb": AABB(-0.5733325, -1.307794, 0.8115507, 1.1466649, 2.615588, 0.074970424),
+"attribute_data": PackedByteArray("/lL+////9oP+UvaD//////5Se9P//3mw//970/5SebD+Uv7////2g//////+UvaD/lJ70///ebD+Unmw//970w=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0A"),
+"material": SubResource("StandardMaterial3D_s7w2j"),
+"name": "concrete_base_02",
+"primitive": 3,
+"uv_scale": Vector4(6.055202, 0.63829017, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("TTsAAAAAAAAAAP//AAAAAAAAAAAAAAAATTv//wAAAABNOwAAAABU1U07/////1TVTTv//wAAVNVNOwAA//9U1bHEAAAAAP///////wAA//+xxP//AAD/////AAAAAP//scQAAAAAqiqxxP////+qKrHEAAD//6oqscT//wAAqir/v/+//7//v/+//7//v/+/qiqqKqoqqiqqKqoqqiqqKv+//7//v/+//7//v/+//79U1VTVVNVU1VTVVNVU1VTV")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_4n772")
+
+[node name="corredor_var2_04" type="StaticBody3D" unique_id=926355358]
+script = ExtResource("1_yn06y")
+
+[node name="Malha" type="MeshInstance3D" parent="." unique_id=1471647205]
+transform = Transform3D(3.248927, 0, 0, 0, -1.4201511e-07, -3.248927, 0, 3.248927, -1.4201511e-07, 0, 0, 0)
+mesh = SubResource("ArrayMesh_q03fd")
+
+[node name="Colisao" type="CollisionShape3D" parent="." unique_id=95993460]
+
+[node name="Saidas" type="Node3D" parent="." unique_id=910580116]
+
+[node name="NorthExit" type="Marker3D" parent="Saidas" unique_id=1955773164]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="SouthExit" type="Marker3D" parent="Saidas" unique_id=222339976]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 4)

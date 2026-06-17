@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://be266ywiwojnp"]
+
+[ext_resource type="PackedScene" uid="uid://dgj2dtiulfnmi" path="res://assets/third_person_controller_assets/models/Sewer/Models/Sewers.dae" id="1_a4l0j"]
+
+[node name="Sewers" unique_id=844011510 instance=ExtResource("1_a4l0j")]

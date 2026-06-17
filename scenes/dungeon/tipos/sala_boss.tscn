@@ -1,0 +1,24 @@
+[gd_scene format=4]
+
+; Sala do chefe. Apenas 1 entrada (sem saída extra).
+; Gerada automaticamente no beco mais distante da sala inicial.
+
+[ext_resource type="Script" path="res://scenes/dungeon/sala_base.gd" id="1_base"]
+
+[node name="SalaBoss" type="StaticBody3D"]
+script = ExtResource("1_base")
+
+[node name="Malha" type="MeshInstance3D" parent="."]
+
+[node name="Colisao" type="CollisionShape3D" parent="."]
+
+[node name="Saidas" type="Node3D" parent="."]
+
+[node name="SouthExit" type="Marker3D" parent="Saidas"]
+; Esta é a entrada da sala Boss (vinda do sul)
+position = Vector3(0, 0, 4)
+rotation_degrees = Vector3(0, 180, 0)
+
+[node name="SpawnBoss" type="Marker3D" parent="."]
+; Ponto de spawn do chefe
+position = Vector3(0, 0, -2)

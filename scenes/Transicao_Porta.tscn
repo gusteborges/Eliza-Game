@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cq2d88bhrtuy7"]
+
+[ext_resource type="VideoStream" uid="uid://dyts0v56vbdkh" path="res://assets/third_person_controller_assets/PortaAbrindo.ogv" id="1_jpwi1"]
+[ext_resource type="Script" uid="uid://dorrv27j3lvih" path="res://scripts/Transicao_Porta.gd" id="2_761sy"]
+[ext_resource type="Shader" uid="uid://b1211ubn44c7r" path="res://scenes/Transicao_Porta.gdshader" id="2_u4h4b"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_761sy"]
+shader = ExtResource("2_u4h4b")
+shader_parameter/posicao_logo = Vector2(0.9, 0.85)
+shader_parameter/tamanho_mancha = 0.05
+shader_parameter/suavidade = 0.15
+shader_parameter/cor_mancha = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" unique_id=1198321984]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=706405139]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_jpwi1")
+autoplay = true
+expand = true
+script = ExtResource("2_761sy")
+caminho_proxima_cena = "uid://c6qouh4a367o7"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=896171707]
+material = SubResource("ShaderMaterial_761sy")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.57254905)
+
+[connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]

@@ -1,0 +1,27 @@
+[gd_scene format=4]
+
+; Sala de save/descanso. 1 ou 2 saídas.
+; Adicione aqui o nó do save point (luz especial, interativo, etc.)
+
+[ext_resource type="Script" path="res://scenes/dungeon/sala_base.gd" id="1_base"]
+
+[node name="SalaSave" type="StaticBody3D"]
+script = ExtResource("1_base")
+
+[node name="Malha" type="MeshInstance3D" parent="."]
+
+[node name="Colisao" type="CollisionShape3D" parent="."]
+
+[node name="Saidas" type="Node3D" parent="."]
+
+[node name="NorthExit" type="Marker3D" parent="Saidas"]
+position = Vector3(0, 0, -4)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="SouthExit" type="Marker3D" parent="Saidas"]
+position = Vector3(0, 0, 4)
+rotation_degrees = Vector3(0, 180, 0)
+
+[node name="SavePoint" type="Marker3D" parent="."]
+; Posição central da sala — coloque aqui o interativo de save
+position = Vector3(0, 0, 0)

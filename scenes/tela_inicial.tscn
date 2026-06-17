@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://c04tvi8mvn87"]
+
+[ext_resource type="Script" uid="uid://c3xlhrmohyxpt" path="res://scripts/tela_inicial.gd" id="1_hvj2l"]
+[ext_resource type="VideoStream" uid="uid://qbjxjvse5i7d" path="res://assets/third_person_controller_assets/OlhoRepilLoop2.ogv" id="1_xo13d"]
+[ext_resource type="Shader" uid="uid://b0nswb3y5yq47" path="res://scenes/tela_inicial.gdshader" id="2_2o6u0"]
+[ext_resource type="FontFile" uid="uid://dv3yj4rdxgoe7" path="res://Fonts/UnifrakturCook/UnifrakturCook-Bold.ttf" id="2_xo13d"]
+
+[sub_resource type="Environment" id="Environment_uw70b"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hvj2l"]
+resource_local_to_scene = true
+shader = ExtResource("2_2o6u0")
+shader_parameter/cor_vinheta = Color(0, 0, 0, 1)
+shader_parameter/raio_interno = 0.05
+shader_parameter/suavidade = 0.45
+shader_parameter/intensidade = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_xo13d"]
+font = ExtResource("2_xo13d")
+font_size = 100
+font_color = Color(1, 0.7411765, 1, 1)
+shadow_size = 15
+shadow_color = Color(0, 0, 0, 0.9411765)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2o6u0"]
+line_spacing = 10.0
+paragraph_spacing = 10.0
+font = ExtResource("2_xo13d")
+font_size = 64
+shadow_size = 15
+shadow_color = Color(0, 0, 0, 0.7921569)
+
+[sub_resource type="Animation" id="Animation_xo13d"]
+resource_name = "FadeOut"
+length = 2.0333333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title/PressAnyKey:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0.8666667)]
+}
+
+[sub_resource type="Animation" id="Animation_2o6u0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title/PressAnyKey:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hvj2l"]
+_data = {
+&"FadeOut": SubResource("Animation_xo13d"),
+&"RESET": SubResource("Animation_2o6u0")
+}
+
+[node name="TelaInicial" type="Node3D" unique_id=204263394]
+script = ExtResource("1_hvj2l")
+metadata/_edit_horizontal_guides_ = [214.0]
+metadata/_edit_vertical_guides_ = [751.0]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1760757433]
+environment = SubResource("Environment_uw70b")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1480304487]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=962874560]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_xo13d")
+autoplay = true
+expand = true
+loop = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1777141931]
+
+[node name="UI" type="Control" parent="CanvasLayer" unique_id=1381751716]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/UI" unique_id=2112804017]
+material = SubResource("ShaderMaterial_hvj2l")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.827451)
+
+[node name="Title" type="Label" parent="CanvasLayer/UI" unique_id=594745723]
+layout_mode = 0
+offset_left = 505.0
+offset_top = 42.0
+offset_right = 1376.0
+offset_bottom = 174.0
+theme_override_constants/line_spacing = 10
+theme_override_fonts/font = ExtResource("2_xo13d")
+theme_override_font_sizes/font_size = 16
+text = "E  l  i  z  a     G  a  m  e"
+label_settings = SubResource("LabelSettings_xo13d")
+
+[node name="PressAnyKey" type="Label" parent="CanvasLayer/UI/Title" unique_id=238690273]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 702.0
+offset_right = 636.0
+offset_bottom = 786.0
+text = "Press Any Key"
+label_settings = SubResource("LabelSettings_2o6u0")
+
+[node name="AnimationPress" type="AnimationPlayer" parent="CanvasLayer/UI" unique_id=1936461228]
+libraries/ = SubResource("AnimationLibrary_hvj2l")
+autoplay = &"FadeOut"

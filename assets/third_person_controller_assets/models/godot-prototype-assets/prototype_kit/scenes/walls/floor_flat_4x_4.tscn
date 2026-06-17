@@ -1,0 +1,33 @@
+[gd_scene format=4 uid="uid://c24ejpovns08r"]
+
+[ext_resource type="Texture2D" uid="uid://djuqgjt3xg4jt" path="res://prototype_kit/textures/PrototypeTextures/PNG/Light/texture_12.png" id="1_78efb"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_o4cpm"]
+data = PackedVector3Array(2, 0, -2, -2, 0, -2, -2, 0, 2, 2, 0, 2, -2, 0, 2, -2, 0, -2, -2, 0, -2, 2, 0, -2, 2, 0, 2, -2, 0, 2, 2, 0, 2, 2, 0, -2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o1to6"]
+albedo_texture = ExtResource("1_78efb")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bg03l"]
+_surfaces = [{
+"aabb": AABB(-2, 0, -2, 4, 1e-05, 4),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"material": SubResource("StandardMaterial3D_o1to6"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAAAQAAAAIAAAADAAAAAwAAAAAAAAADAAAAAwAAAAAAAAABAAAAAQAAAAAAAAABAAAAAwAAAAAAAAABAAAAAwAAAAAAAAADAAAAAwAAAAAAAAADAAAAAQAAAAIAAAADAAAAAQAAAAAAAAABAAAAAwAAAAAAAAABAAAAAQAAAAAAAAABAAAAAQAAAAIAAAADA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//////AAD/f/////8AAP9//////wAA/3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA")
+}]
+
+[node name="floor_flat_4x4" type="Node3D" unique_id=1815530426]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1512892866]
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1631338087]
+shape = SubResource("ConcavePolygonShape3D_o4cpm")
+
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=813149387]
+mesh = SubResource("ArrayMesh_bg03l")

@@ -1,0 +1,27 @@
+[gd_scene format=4]
+
+; TEMPLATE: T-Junction (North + East + West)
+; Corresponde ao nó 'T' do Sewers.dae
+
+[ext_resource type="Script" path="res://scenes/dungeon/sala_base.gd" id="1_base"]
+
+[node name="SalaT" type="StaticBody3D"]
+script = ExtResource("1_base")
+
+[node name="Malha" type="MeshInstance3D" parent="."]
+
+[node name="Colisao" type="CollisionShape3D" parent="."]
+
+[node name="Saidas" type="Node3D" parent="."]
+
+[node name="NorthExit" type="Marker3D" parent="Saidas"]
+position = Vector3(0, 0, -4)
+rotation_degrees = Vector3(0, 0, 0)
+
+[node name="EastExit" type="Marker3D" parent="Saidas"]
+position = Vector3(4, 0, 0)
+rotation_degrees = Vector3(0, -90, 0)
+
+[node name="WestExit" type="Marker3D" parent="Saidas"]
+position = Vector3(-4, 0, 0)
+rotation_degrees = Vector3(0, 90, 0)

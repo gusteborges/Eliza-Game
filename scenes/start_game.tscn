@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dl4fms0wfc7jc"]
+
+[ext_resource type="FontFile" uid="uid://dv3yj4rdxgoe7" path="res://Fonts/UnifrakturCook/UnifrakturCook-Bold.ttf" id="1_c75kr"]
+
+[node name="Start Game" type="Button" unique_id=812111922]
+offset_right = 439.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("1_c75kr")
+theme_override_font_sizes/font_size = 24
+text = "Press any Key"

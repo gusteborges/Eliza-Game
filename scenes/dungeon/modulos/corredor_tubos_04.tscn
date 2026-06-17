@@ -1,0 +1,113 @@
+[gd_scene format=4 uid="uid://t5f3bjn4hdxc"]
+
+[ext_resource type="Script" uid="uid://c12r1nc6qk068" path="res://scenes/dungeon/sala_base.gd" id="1_8gkpv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qvias"]
+resource_name = "brick_modern"
+cull_mode = 2
+roughness = 0.07647059
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p0qe2"]
+resource_name = "concrete_bare_01"
+cull_mode = 2
+roughness = 0.07647059
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l4vlo"]
+resource_name = "brick_pavement"
+cull_mode = 2
+roughness = 0.07647059
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_abhbm"]
+_surfaces = [{
+"aabb": AABB(-1.297883, -2.061979, -1.983807, 3.125876, 3.542163, 1.8764086),
+"format": 34896613377,
+"index_count": 138,
+"index_data": PackedByteArray("AAABAAIAAwACAAQAAwAAAAIABQAAAAMABQADAAYABwAAAAUAAAAIAAEABwAIAAAACAAJAAEAHQAIAAcACAAdAAkAHQAHAAoAHQALAAkADAAdAAoAHQAMAAsADAAKAA0ACwAMAB4ACwAeAA4AHwAMAA0AHwANABAAIAAeAAwAHwAgAAwADgAeABIAEgAeACAADgASABMAEgAUABMADwAfABAADwAQABEAGAAgAB8AGAAfAA8AEgAgABgAGQAPABEAGQAYAA8AGQARABsAGgAZABsAGgAbABwAIQAZABoAGQAhABgAIQAaABcAIQAXABYAGAAhACIAIQAWACIAGAAiABIAEgAiABQAIgAWABUAIgAVABQA"),
+"lods": [0.6744511, PackedByteArray("AAABAAIAAwACAAQAAwAAAAIABQAAAAMABQADAAYABwAAAAUAAAAIAAEABwAIAAAACAAJAAEACAAHAAoACAALAAkADAAIAAoACAAMAAsADAAKAA0ACwAMAA4ADwAMAA0ADwANABAADwAQABEADgAMABIADgASABMAEgAUABMAEgAVABQAEgAWABUAFwAWABIAEgAMABgAGAAXABIADwAYAAwAGQAXABgAGQAYAA8AGQAPABEAFwAZABoAGQARABsAGgAZABsAGgAbABwA")],
+"name": "brick_modern",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 35,
+"vertex_data": PackedByteArray("NcurTIyQAAD//2pepT4AAP//q0yMkAAANcurTP//AAD//6tM//8AADXLAACMkAAANcsAAP//AAAYtwAApT4AABi3al6lPgAA//9efU4RAAAFlAAAThEAAP//VaYAAAAAmmVVpgAAAACaZQAAAAAAAP//S89OEQAAHBRqXqU+AAAwNwAAThEAABwUAAClPgAAGLc/7qU+AAD//z/upT4AAP////+MkAAA////////AAA1y/////8AAAAA/////wAAHBQ/7qU+AAAAAKtMjJAAAAAAq0z//wAAAAAAAIyQAAAAAAAA//8AAAWUXn1OEQAABZRLz04RAAAwN159ThEAADA3S89OEQAAAAD//4yQAAA1y///jJAAAA==")
+}, {
+"aabb": AABB(-1.297882, -2.061979, -0.1073984, 3.125875, 3.542163, 1.3580534),
+"format": 34896613377,
+"index_count": 42,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAADAAAABAAAAAUABgAHAAgABgAJAAcABgAKAAkACgAGAAsACgALAAwADQAIAAcADQAHAA4ADQAOAA8ADQAPABAADQAQABEA"),
+"name": "concrete_bare_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("NcurTP//AAD//6tMAAAAAP//q0z//wAANcurTAAAAAA1ywAAAAAAADXLAAD//wAAAACrTAAAAAAAAP////8AAAAA//8AAAAAAAAbev//AAAAAKtM//8AAAAAAAAAAAAAAAAAAP//AAA1y///AAAAAEgf/////wAANcv/////AAD///////8AAP////8AAAAA")
+}, {
+"aabb": AABB(-1.297882, -2.061979, 1.250655, 3.125875, 3.542163, 1e-05),
+"format": 34896613377,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAQAEAAUAAQAGAAQAAQADAAcAAQADAAcAAQAIAAYAAQAIAAYAAQAHAAkAAQAJAAgAAQAJAAgAAQAHAAkACgAIAAkACgAIAAkACgAJAAcACgAJAAcA"),
+"name": "brick_pavement",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 11,
+"vertex_data": PackedByteArray("/////wAAAAA1y6tMAAAAAP//q0wAAAAANcv//wAAAAAAAAAAAAAAADXLAAAAAAAAAACrTAAAAABIH///AAAAAAAAG3oAAAAAslkFqQAAAAAAAP//AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4elw4"]
+resource_name = "SerwersP.004"
+_surfaces = [{
+"aabb": AABB(-1.297883, -2.061979, -1.983807, 3.125876, 3.542163, 1.8764086),
+"attribute_data": PackedByteArray("fLzhuDXVn5411eG4ELOfnny8m9w11ZvcELOfnjXVm9w11eG4fLyb3DXVn54Qsz7yNdW6xjXVg9811T7y5Yy6xjXV8K0QszWbNdU1m7pmNZsQs5+enTTwrZ00NZudNLrGnTSD37pmPvKdND7ynTSfnk5d4bidNOG4umafnjma0rkNdpPZDXbSuTmak9lOXeG4nTSfnp004bi6Zp+eDXaT2Tma0rkNdtK5OZqT2V2OedtJ65i4Set524+X9p4X4vaeIKH///////+b9jfChKo3wpv2jcWP0O7whKqNxXy84bh8vOG4oqKD36Ki8K3ljLrGJ3eD3yd38K2iovCtumafnl2OmLhJ65i4IKFi3P7/YtzkujnYO+Y52A=="),
+"format": 34896613399,
+"index_count": 138,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUANwAHAAgANwAJAAcABgA4AAgABgAIAAoAOQAMAA0ACwA5AA0ACwANAA4AOQAPAAwADAAPADoADAA6ABAAEAA6ABEAEAARABIAGwAcAB0AGwAeABwAHwAgACEAHwAiACAAOwAYABcAOwA8ABgAPAAaABgAPAAZABoAPQA7ABcAPQA+ADsAFAA+AD0AFAA9AD8APQAXABUAEwA9ABUAEwAVABYAIwAkACUAIwAmACQAJwAoACkAJwAqACgAQAAtACsAQAAsAC0AQQBAAC4AQQAuAC8AQgAxAEMAQgAwADEAMwBCAEMAMwBDADIANABEADYANABFAEQARABFADUA"),
+"lods": [0.6744511, PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUABgAHAAgABgAJAAcABgAIAAoACwAMAA0ACwANAA4ACwAPAAwADAAPABAAEAARABIAEAAPABEAEwAUAA8AEwAVABYAEwAXABUAEwAPABcADwAYABcADwAZABgAGQAaABgAGwAcAB0AGwAeABwAHwAgACEAHwAiACAAIwAkACUAIwAmACQAJwAoACkAJwAqACgAKwAsAC0ALAArAC4ALAAuAC8AMAAxADIAMwAwADIANAA1ADYA")],
+"material": SubResource("StandardMaterial3D_qvias"),
+"name": "brick_modern",
+"primitive": 3,
+"uv_scale": Vector4(2.063354, 1.8097018, 0, 0),
+"vertex_count": 70,
+"vertex_data": PackedByteArray("NcurTIyQQrf//2pepT6Hpf//q0yMkBa4GLdqXqU+R6I1y6tM////v///q0z///+/GLc/7qU+d1r/////////P/////+MkOhHNcv//////z///z/upT53Whi3al6lPkei//9VpgAAAID//159ThHtkf//al6lPoelmmVVpgAAKoP//0vPThHtkRi3P+6lPoel//8/7qU+h6UcFGpepT4ZyBwUP+6lPsTJMDcAAE4R8MEcFAAApT4ZyJplAAAAAP+/BZQAAE4R8MEYt2pepT7Txhi3AAClPhnIGLcAAKU+Gcg1y6tMjJB60DXLAACMkOvQGLdqXqU+08YAAKtM//9U1QAAAACMkOvQAAAAAP//VNUAAKtMjJDr0AAAq0yMkBMvHBQAAKU+5TcAAAAAjJATLxwUal6lPuU3NcsAAIyQEy81y6tM//+qKjXLAAD//6oqNcurTIyQhC8AAP////9U1QAAq0yMkOvQAACrTP//VNUcFD/upT7EyRwUal6lPhnIAAD//////z81y///////Pxi3P+6lPndaHBQ/7qU+hFYYtz/upT6HpZplVaYAACqDHBQ/7qU+eqk1y///jJDoRzXL//+MkOhHBZRefU4RCYoFlEvPThHtkZplVaYAAP+/BZRefU4R/78wN159ThHwwTA3S89OEf+/HBRqXqU+GcgAAP//jJB70QAAq0yMkOvQAAD//4yQ3UY1y///jJDoRzA3S89OEZyQBZRLz04R7ZH///9/////f////3////9/////f////38AAP9/AAD/fwAA/38AAP9/AAD/f////3//f///////f////38VPy0/AAD/fwAA/38AAP9/4B/gH8EhwSHHE8cT4B/gH/////837DfsxeHF4R7gHuAe4B7ggdiB2DHYMdjF4cXhqiqqKs0nzSeqKqoqzSfNJ80nzSfgH+AfzSfNJ+Af4B8x2DHYVNVU1VTVVNWB2IHYqqpUVc2nMVipqlRVwaE9XuCfHmAAAP9/AAD/fwAA/38AAP9/AAD/fxU/LT8AAP9/AAD/fwAA/38lwzXCAAD/fwEArQbZ/9nsxxPHE50ALB3gH+AfMajNV82nMVgAAP9/AAD/f2c67DwAAP9/")
+}, {
+"aabb": AABB(-1.297882, -2.061979, -0.1073984, 3.125875, 3.542163, 1.3580534),
+"attribute_data": PackedByteArray("gaYg/8S8TIDEvCD/gaZMgL/CeICybNP/smx4gPGs0/+/wtP/gaZMgMS8IP/EvEyAgaYg////TYAb2////////xvbTYAb2/////9NgP////8b202A0sJdgOR57//Swu//n2zv/59sXYA="),
+"format": 34896613399,
+"index_count": 42,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUABAAIAAcACQAKAAsACQAMAAoADQAOAA8ADQAQAA4AEQASABMAEQAUABIAFQAWABcAFQAYABYAFQAZABgA"),
+"material": SubResource("StandardMaterial3D_p0qe2"),
+"name": "concrete_bare_01",
+"primitive": 3,
+"uv_scale": Vector4(5.39521, 1.9952512, 0, 0),
+"vertex_count": 26,
+"vertex_data": PackedByteArray("NcurTP///7///6tMAAD/v///q0z///+/NcurTAAA/78AAKtMAABU1QAA/////1TVAAD//wAAVNUAABt6//9U1QAAq0z//1TVNcv//wAA/z//////////P/////8AAP8/Ncv//////z81ywAAAACqKjXLq0z//6oqNcsAAP//qio1y6tMAACqKgAAq0z//1TVAAAAAAAAVNUAAAAA//9U1QAAq0wAAFTVNcv//wAA/z9IH///////PzXL//////8/AAD//////z8AAP//AAD/P////3////9//v//f/7//3+qqlRVqqpUVaqqVFWqqlRVqqpUVQAA/38AAP9/AAD/fwAA/39VVamqVVWpqlVVqapVVamqqqpUVaqqVFWqqlRVqqpUVQAA/38AAP9/AAD/fwAA/38AAP9/")
+}, {
+"aabb": AABB(-1.297882, -2.061979, 1.250655, 3.125875, 3.542163, 1e-05),
+"attribute_data": PackedByteArray("//+sgAbf////////Bt+sgKJzrIAemG2+F2CsgBdgvN8XYP//F2D//9MprIDTKf//F2CsgEGArIB1od+4Bt+sgAbfRpQG3///"),
+"format": 34896613399,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAQADAAQAAQAEAAUABgAFAAQABgAHAAUAAQAFAAcAAQAHAAgACQAKAAsACQAMAAoACQANAAwACQAOAA0ADwANAA4ADwAOABAACQAQAA4ACQARABAA"),
+"material": SubResource("StandardMaterial3D_l4vlo"),
+"name": "brick_pavement",
+"primitive": 3,
+"uv_scale": Vector4(1.9956474, 1.9895037, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("/////wAAAAA1y6tMAAAAAP//q0wAAAAANcv//wAAAABIH///AAAAALJZBakAAAAAAAD//wAAAAAAABt6AAAAAAAAq0wAAAAANcurTAAAAAAAAAAAAAAAADXLAAAAAAAAAACrTAAAAAAAABt6AAAAALJZBakAAAAAAAD//wAAAABIH///AAAAADXL//8AAAAA/v//f////3////9/////f////3/+//9/////f////3////9//7//v/+//7//v/+//7//v/+//7//v/+//7//v/+//7//v/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_abhbm")
+
+[node name="corredor_tubos_04" type="StaticBody3D" unique_id=19521974]
+script = ExtResource("1_8gkpv")
+
+[node name="Malha" type="MeshInstance3D" parent="." unique_id=1547223697]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
+mesh = SubResource("ArrayMesh_4elw4")
+
+[node name="Colisao" type="CollisionShape3D" parent="." unique_id=1284262290]
+
+[node name="Saidas" type="Node3D" parent="." unique_id=1421803204]
+
+[node name="NorthExit" type="Marker3D" parent="Saidas" unique_id=1107428134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="SouthExit" type="Marker3D" parent="Saidas" unique_id=344312983]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 4)

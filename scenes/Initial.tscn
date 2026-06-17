@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c5swp5a7f0w7m"]
+
+[ext_resource type="FontFile" uid="uid://dv3yj4rdxgoe7" path="res://Fonts/UnifrakturCook/UnifrakturCook-Bold.ttf" id="1_vmgvq"]
+[ext_resource type="PackedScene" uid="uid://dl4fms0wfc7jc" path="res://scenes/start_game.tscn" id="2_ocfsq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lrddq"]
+font = ExtResource("1_vmgvq")
+font_size = 64
+font_color = Color(1, 0.7294118, 1, 1)
+shadow_size = 15
+shadow_color = Color(0, 0, 0, 0.7764706)
+
+[node name="Control" type="MarginContainer" unique_id=193065333]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 25
+
+[node name="Titulo" type="Label" parent="." unique_id=1223021654]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Eliza Game"
+label_settings = SubResource("LabelSettings_lrddq")
+
+[node name="Start Game" parent="." unique_id=812111922 instance=ExtResource("2_ocfsq")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
